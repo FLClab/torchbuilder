@@ -27,6 +27,22 @@ Use this class to reset the color to the default one of the terminal.
 print(f"{Color(154)}I am colored :) {ResetColor()} And I am not colored :(")
 ```
 
+### RGBColor
+#### Description
+This class is a subclass of Color, but using rgb colors.  Just pass the red value, green value and blue value
+to the constructor.  Values must be between 0 and 255
+
+**WARNING:**
+
+**Not all terminals support RGB color.  When a terminal support its, it is called TrueColor support.
+Most terminal will support the base Color class.  If you are not sure if users will have TrueColor support,
+use the base Color class.**
+
+#### Example:
+```python
+print(f"{RGBColor(106,206,92)}I am colored green :) {ResetColor()}")
+```
+
 ### ColorPalette
 #### Description
 Show the color available with their id.  To use it, it is only needed to print the initialized object.
